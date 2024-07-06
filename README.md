@@ -47,9 +47,16 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 
 3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
 
-## 關機後之後要更新要怎麼做？(只更新了main)
+- 注意事項 (用外接硬碟會遇到的情況)
+解決方法：git config --global --add safe.directory "*"
+來源：https://github.com/tschaub/gh-pages/issues/443#issuecomment-1288016250
+
+## 關機後之後要更新要怎麼做？
+### 更新main(看到工作區有 M )
 ```cmd
 git add .
 git commit -m "[message]"
 git push
 ```
+### 更新 gh-pages
+執行 `npm run deploy`
