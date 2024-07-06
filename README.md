@@ -46,3 +46,10 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 ```
 
 3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+
+## 關機後之後要更新要怎麼做？(只更新了main)
+```cmd
+git add .
+git commit -m "[message]"
+git push
+```
